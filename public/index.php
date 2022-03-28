@@ -1,5 +1,5 @@
 <?php
-   $file = fopen('files/file-name.txt','r'); // Open the file
+   $file = fopen('files/new-profiler.log','r'); // Open the file
    if ($file == false) die('Could not open file.');
 
    $i = 0;
@@ -15,7 +15,7 @@
       $i++;
    }
 
-   $resultFile = fopen('oficial-files/file-name.txt','w'); // Create the file
+   $resultFile = fopen('result-files/new-profiler.csv','w'); // Create the file
    fwrite($resultFile, implode($arrFile)); // Write to file (But first I transform the array into a string)
 
    fclose($file); // Close the file
